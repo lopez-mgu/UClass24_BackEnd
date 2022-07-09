@@ -2,13 +2,16 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 
+require('dotenv').config()
+require('./db/mongodb');
+
 const router = require('./apis')
 
 app.use(cors());
 app.use(express.json());
 app.use(router);
 
-require('./db/mongodb');
+
 
 const PORT = 4005
 

@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
+require('dotenv').config();
 
-const url = 'mongodb+srv://Miguel:ucamp7@library.nudtji4.mongodb.net/?retryWrites=true&w=majority'
+const url = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@${process.env.DB_NAME}.mongodb.net/Library?retryWrites=true&w=majority`
 
 mongoose.connect(url, {}, () => {
     console.log('-----------')

@@ -1,7 +1,7 @@
 const bookModel = require('../models/booksModel')
 
 const getBooks = async () => {
-    return bookModel.find({}).exec();
+    return bookModel.find({});
 }
 
 const createBook = async (body) =>{

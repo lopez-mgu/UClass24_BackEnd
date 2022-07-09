@@ -3,7 +3,10 @@ const mongoose = require('mongoose');
 const { Schema, model } = mongoose;
 
 const categorySchema = new Schema({
-    category: String
+    category: {
+        type: String,
+        required: true
+    }
 },{
     versionKey: false,
     timestamps:true
